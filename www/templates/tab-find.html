@@ -1,0 +1,453 @@
+<link rel="stylesheet" href="../js/find.js">
+<ion-view>
+  <ion-content class="find">
+    <div class="img">
+      <img src="./img/xiniu4.jpg" style="height: 140px;width: 360px;">
+    </div>
+    <div class="line">
+
+    </div>
+    <div class="like">
+      <p>
+        猜你喜欢
+        <span>换一批</span>
+      </p>
+      <ul>
+        <li ng-repeat="article in articles|orderBy:'wx':true|limitTo:4">
+          <div class="right" ng-click="herdetail.show();aount(article.id)">
+            <div class="info">
+              <h4>{{article.title}}</h4>
+              <h5>By{{article.nick}}</h5>
+              <h6>{{article.type}}·{{article.state}}·{{article.words}}</h6>
+            </div>
+            <div class="card">
+              <img ng-src="{{article.cover}}" style="width: 100px;height:80px">
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="l0pine">
+
+    </div>
+    <div class="img1">
+      <img src="./img/xiniu3.jpg" style="height:150px;width:360px;">
+    </div>
+    <div class="line">
+
+    </div>
+    <div class="type">
+      <p>发现不同类型的故事</p>
+      <ion-slide-box active-slide="myActiveSlide2" slide-interval="2000" does-continue="true">
+        <ion-slide>
+          <div class="box banner">
+            <ul>
+              <li ng-click="detail.show();$event.stopPropagation();count(1)">
+                <span>
+                  <img src="./img/1426613773294670578l.jpg" style="width: 45px;height: 45px;">
+                </span>
+                <p>散文</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(2)">
+                <span>
+                  <img src="./img/1341939555317000253l.jpg" style="width: 45px;height: 45px;">
+                </span>
+                <p>乡土</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(3)">
+                <span>
+                  <img src="./img/11728466921577844105l.jpg" style="width: 45px;height: 45px;">
+                </span>
+                <p>微型小说</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(4)">
+                <span>
+                  <img src="./img/6172329811326725538l.jpg" style="width: 45px;height: 45px;">
+                </span>
+                <p>游记</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(5)">
+                <span>
+                  <img src="./img/29486624585976212l.jpg" style="width: 45px;height: 45px;">
+                </span>
+                <p>言情</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(6)">
+                <span>
+                  <img src="./img/2011695488155943352l.jpg" style="width: 45px;height: 45px;">
+                </span>
+                <p>仙侠</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(7)">
+                <span>
+                  <img src="./img/18778220601400490838l.jpg" style="width: 45px;height: 45px;">
+                </span>
+                <p>奇幻</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(8)">
+                <span>
+                  <img src="./img/2137959823798828784l.jpg" style="width: 45px;height: 45px;">
+                </span>
+                <p>志怪</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(9)">
+                <span>
+                  <img src="./img/17068092291060505621l.jpg" style="width: 45px;height: 45px;">
+                </span>
+                <p>悬疑</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(10)">
+                <span>
+                  <img src="./img/1343395843891593894l.jpg" style="width: 45px;height: 45px;">
+                </span>
+                <p>艺术</p>
+              </li>
+
+            </ul>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="box banner">
+            <ul>
+              <li ng-click="detail.show();$event.stopPropagation();count(11)">
+                <span>
+                  <img src="./img/19729211471684818l.jpg" style="height: 45px;width: 45px;">
+                </span>
+                <p>童话</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(12)">
+                <span>
+                  <img src="./img/87547168584509909l.jpg" style="height: 45px;width: 45px;">
+                </span>
+                <p>非虚构</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(13)">
+                <span>
+                  <img src="./img/1679789065203357477l.jpg" style="height: 45px;width: 45px;">
+                </span>
+                <p>青春</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(14)">
+                <span>
+                  <img src="./img/2933892851418383158l.jpg" style="height: 45px;width: 45px;">
+                </span>
+                <p>职场</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(15)">
+                <span>
+                  <img src="./img/1147805726772084234l.jpg" style="height: 45px;width: 45px;">
+                </span>
+                <p>架空</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(16)">
+                <span>
+                  <img src="./img/271020677713731802l.jpg" style="height: 45px;width: 45px;">
+                </span>
+                <p>穿越</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(17)">
+                <span>
+                  <img src="./img/12827858351119250920l.jpg" style="height: 45px;width: 45px;">
+                </span>
+                <p>科幻</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(18)">
+                <span>
+                  <img src="./img/2390740822137834062l.jpg" style="height: 45px;width: 45px;">
+                </span>
+                <p>历史</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(19)">
+                <span>
+                  <img src="./img/2043481232136961529l.jpg" style="height: 45px;width: 45px;">
+                </span>
+                <p>试试手气</p>
+              </li>
+              <li ng-click="detail.show();$event.stopPropagation();count(20)">
+                <span>
+                  <img src="./img/1279380685130454019l.jpg" style="height: 45px;width: 45px;">
+                </span>
+                <p>秘密</p>
+              </li>
+
+            </ul>
+          </div>
+        </ion-slide>
+      </ion-slide-box>
+    </div>
+    <div class="line">
+
+    </div>
+    <div class="read">
+      <p>有声读物</p>
+      <div class="card">
+        <img src="./img/xiniu2.jpg" style="width: 340px;height: 180px;">
+      </div>
+    </div>
+    <div class="line">
+
+    </div>
+    <div class="like1">
+      <p>你可能喜欢的犀牛er</p>
+      <ul class="">
+        <li ng-repeat="article in articles|orderBy:'hot':false|limitTo:4">
+          <img src="{{article.cover}}" alt="">
+          <p>{{article.nick}}</p>
+          <p>{{article.sign}}</p>
+          <p>{{article.tj}}已推荐</p>
+          <input type="button" ng-model="s" ng-value="s" ng-click="click_k(article.nick)">
+        </li>
+      </ul>
+      <div></div>
+    </div>
+    <div class="line"></div>
+    <div class="book">
+      <p>犀牛故事出品图书</p>
+      <ion-slide-box active-slide="myActiveSlide" slide-interval="2000" does-continue="true">
+        <ion-slide>
+          <div class="box banner">
+            <ul>
+              <li>
+                <span>
+                  <img src="./img/526648115134607430l.jpg" style="height: 120px;width: 100px;">
+                </span>
+                <h6>我与我的室友</h6>
+                <p>2017-05-01</p>
+              </li>
+              <li>
+                <span>
+                  <img src="./img/11714328811435329948l.jpg" style="height: 120px;width: 100px;">
+                </span>
+                <h6>饮罪者</h6>
+                <p>2008-03-01</p>
+              </li>
+              <li>
+                <span>
+                  <img src="./img/11376238321328369245.jpg" style="height: 120px;width: 100px;">
+                </span>
+                <h6>毕业季</h6>
+                <p>2011-06-21</p>
+              </li>
+            </ul>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="box banner">
+            <ul>
+              <li>
+                <span>
+                  <img src="./img/69.jpg" style="height: 120px;width: 100px;">
+                </span>
+                <h6>天蝎座</h6>
+                <p>2015-05-01</p>
+              </li>
+              <li>
+                <span>
+                  <img src="./img/9753253991734003353l_small.jpg" style="height: 120px;width: 100px;">
+                </span>
+                <h6>我的世界</h6>
+                <p>1998-09-01</p>
+              </li>
+              <li>
+                <span>
+                  <img src="./img/4248520151171456241l.jpg" style="height: 120px;width: 100px;">
+                </span>
+                <h6>我的家</h6>
+                <p>2004-05-01</p>
+              </li>
+            </ul>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="box banner">
+            <ul>
+              <li>
+                <span>
+                  <img src="./img/1465519025672141681.jpg" style="height: 120px;width: 100px;">
+                </span>
+                <h6>鬼娃杂技</h6>
+                <p>2010-05-01</p>
+              </li>
+              <li>
+                <span>
+                  <img src="./img/1529582159467756805.png" style="height: 120px;width: 100px;">
+                </span>
+                <h6>江月见重山</h6>
+                <p>1952-05-01</p>
+              </li>
+              <li>
+                <span>
+                  <img src="./img/10170079141842146566l.jpg" style="height: 120px;width: 100px;">
+                </span>
+                <h6>那年</h6>
+                <p>2013-05-01</p>
+              </li>
+            </ul>
+          </div>
+        </ion-slide>
+      </ion-slide-box>
+    </div>
+    <div class="line">
+
+    </div>
+  </ion-content>
+  <!--头像模态框-->
+  <script id="templates/detail.html" type="text/ng-template">
+    <ion-modal-view>
+      <ion-header-bar class="header">
+        <a class="buttonF" ng-click="detail.hide()"><</a>
+        <span class="person">{{Type}}</span>
+      </ion-header-bar>
+
+      <ion-content class="Ioncontent">
+        </div>
+        <div class="m">
+          <ul>
+            <li ng-repeat="countes in counts">
+              <div class="card">
+                <div class="item item-text-wrap">
+                  <div class="top">
+                  <span>
+                   <img src="{{countes.turl}}" ng-click="C.show();count(countes.userid)">
+                  </span>
+                    <div class="laiyuan">
+                      <h2>{{countes.nick}}</h2>
+                      <p>{{countes.putTime}}发布</p>
+                    </div>
+                    <h6>{{countes.type}}·{{countes.state}}</h6>
+                  </div>
+                  <h1 style="margin-top: 10px;">{{countes.title}}</h1>
+                  <div class="card detail" ng-click="herdetail.show();aount(countes.id)">
+                    <img src="{{countes.cover}}"style="width: 328px;height:150px; ">
+                  </div>
+                  <div class="content" ng-click="herdetail.show();aount(countes.id)">
+                    {{countes.text}}
+                  </div>
+                  <div class="caozuo">
+                    <i>
+                      <div style="height: 16px;width: 16px;margin-top: 2px;">
+                        <img src="./img/tuij.png"style="height: 16px;width: 16px;">
+                      </div>
+                    </i>
+                    <i>{{countes.tj}}</i>
+                    <i class="icon ion-android-favorite-outline"></i>
+                    <i>{{countes.hot}}</i>
+                    <i class="icon ion-ios-chatbubble-outline"></i>
+                    <i>{{countes.wx}}</i>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </ion-content>
+    </ion-modal-view>
+  </script>
+  <!--文章模态框-->
+  <script id="templates/herdetail.html" type="text/ng-template">
+
+    <ion-modal-view>
+      <ion-header-bar class="header">
+        <a class="buttonF" ng-click="herdetail.hide()"><</a>
+        <span class="febmian">封面</span>
+        <span>
+          <span style="font-size: 8px;">A</span><span>A</span>
+        </span>
+      </ion-header-bar>
+
+
+      <ion-content>
+        <ul>
+          <li ng-repeat="aountes in aounts">
+            <div class="contentbox">
+              <div class="Img" style="background: url('{{aountes.cover}}');background-size: cover;"></div>
+              <p class="title">{{aountes.title}}</p>
+              <p class="state">{{aountes.type}} · {{aountes.state}}</p>
+              <p class="auther">
+                <img style="width: 20px;height: 20px;border-radius: 50%;" src="{{aountes.turl}}">
+                <span>{{aountes.nick}} · {{aountes.readnum}}次阅读</span>
+              </p>
+            </div>
+            <div>
+              <p style="text-indent: 2em">{{aountes.text}}</p>
+            </div>
+          </li>
+        </ul>
+      </ion-content>
+    </ion-modal-view>
+  </script>
+  <!--C模态框-->
+  <script id="C.html" type="text/ng-template">
+
+    <ion-modal-view>
+      <ion-header-bar class="header">
+        <a class="buttonF" ng-click="C.hide()"><</a>
+        <span class="person">个人主页</span>
+      </ion-header-bar>
+
+      <ion-content class="Ioncontent">
+        <div class="box" style="background: url('{{Burl}}')no-repeat;background-size: cover;">
+          <div class="head">
+            <span class="ion-ios-email-outline"></span>
+            <span><img src="{{Turl}}" style="width: 100%;height: 100%;" alt=""></span>
+            <span class="ion-ios-personadd-outline"></span>
+          </div>
+          <div class="sect">
+            <p>{{name}}</p>
+            <p>{{Sign}}</p>
+            <p>
+              <span>关注:{{Good}}</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span>读者：{{Hot}}</span>
+            </p>
+          </div>
+        </div>
+        <div class="Nav">
+          <span>他的故事</span>
+          <span>他的收藏</span>
+          <span>他的推荐</span>
+        </div>
+        <div class="m">
+          <ul>
+            <li ng-repeat="countes in counts">
+              <div class="card">
+                <div class="item item-text-wrap">
+                  <div class="top">
+                  <span>
+                   <img src="{{countes.turl}}" ">
+                  </span>
+                    <div class="laiyuan">
+                      <h2>{{countes.nick}}</h2>
+                      <p>{{countes.putTime}}发布</p>
+                    </div>
+                    <h6>{{countes.type}}·{{countes.state}}</h6>
+                  </div>
+                  <h1 style="margin-top: 10px;">{{countes.title}}</h1>
+                  <div class="card detail" ng-click="herdetail.show();aount(countes.id)">
+                    <img src="{{countes.cover}}"style="width: 328px;height:150px; ">
+                  </div>
+                  <div class="content" ng-click="herdetail.show();aount(countes.id)">
+                    {{countes.text}}
+                  </div>
+                  <div class="caozuo">
+                    <i>
+                      <div style="height: 16px;width: 16px;margin-top: 2px;">
+                        <img src="./img/tuij.png"style="height: 16px;width: 16px;">
+                      </div>
+                    </i>
+                    <i>{{countes.tj}}</i>
+                    <i class="icon ion-android-favorite-outline"></i>
+                    <i>{{countes.hot}}</i>
+                    <i class="icon ion-ios-chatbubble-outline"></i>
+                    <i>{{countes.wx}}</i>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </ion-content>
+    </ion-modal-view>
+  </script>
+</ion-view>
+

@@ -1,0 +1,529 @@
+/* Empty. Add your own CSS if you like */
+/* Empty. Add your own CSS if you like */
+.LEFT{
+  width: 300px;
+  height: 70px;
+  /*border:1px solid red;*/
+  line-height: 70px;
+  position: relative;
+}
+.LEFT .col img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.LEFT .col-70 .TEN{
+  font-size: 20px;
+  position: relative;
+  top:-20px;
+  left:10px;
+  color: #ffffff;
+}
+.LEFT .col-70 .CKGZ{
+  font-size: 13px;
+  color: lightgray;
+  position: relative;
+  top:5px;
+  left:-60px;
+}
+
+.CENTER{
+  width: 100%;
+  height: 400px;
+  /*border:1px solid blue;*/
+  margin-top:30px;
+}
+.CENTER ul{
+  color: white;
+  font-size: 25px;
+  margin-left: 30px;
+  /*margin-top:5px;*/
+}
+.CENTER ul li{
+  margin-top: 40px;
+}
+.CENTER ul li a{
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+  left:40px;
+  color: white;
+}
+.CENTER ul li a i{
+  position: relative;
+  right:20px;
+  font-size: 20px;
+}
+
+.FOOTER{
+  width: 100%;
+  height: 70px;
+  /*border:1px solid blue;*/
+  margin-top:35px;
+}
+.FOOTER .FLEFT{
+  width: 50px;
+  height: 70px;
+  /*border:1px solid blue;*/
+  float: left;
+  margin-left:30px;
+  margin-top:5px;
+  color: white;
+}
+.FOOTER .FRIGHT{
+  width: 70px;
+  height: 70px;
+  /*border:1px solid blue;*/
+  float: right;
+  margin-right:30px;
+  margin-top:5px;
+  color: white;
+}
+.FOOTER .FLEFT .ion-ios-gear-outline,.FOOTER .FRIGHT .ion-ios-cloudy-night-outline{
+  display: block;
+  font-size: 35px;
+  color: white;
+  margin-left:2px;
+}
+.FOOTER .FRIGHT .ion-ios-cloudy-night-outline{
+  margin-left:10px;
+}
+
+
+.row .col-10{
+  font-size: 20px;
+}
+.row .col-60 .WRITE{
+  margin-left:80px;
+  font-size: 16px;
+}
+.row .col-30 .NEXT{
+  float: right;
+  color: deepskyblue;
+}
+.padding .LIST{
+  width: 100%;
+  height: 600px;
+  border:1px solid white;
+}
+.padding .LIST h4{
+  margin-top:80px;
+  text-align: center;
+}
+.padding .LIST .RMSS{
+  width: 50%;
+  height: 430px;
+  border:1px solid white;
+  margin:20px auto;
+}
+.padding .LIST .RMSS ul{
+  text-align: center;
+}
+.padding .LIST .RMSS ul li{
+  margin-top:18px;
+  color: #b8b8b8;
+}
+
+.FMZ{
+  width: 100%;
+  height: 600px;
+  /*border:1px solid red;*/
+  margin-top:70px;
+}
+.FMZ i{
+  margin-left:10px;
+  font-size: 10px;
+  margin-top:-5px;
+}
+.FMZ .FM,.FMZ .ZJ{
+  width: 80%;
+  height: 250px;
+  border-left:1px solid darkgray;
+  margin-left:5px;
+  margin-top:-5px;
+}
+.FMZ .TZJ{
+  display: block;
+  margin-top:20px;
+}
+.FMZ .FM .CARD,.FMZ .ZJ .CARD{
+  width: 80%;
+  height: 200px;
+  margin:20px auto;
+}
+.FMZ .FM .CARD .CARDS,.FMZ .ZJ .CARD .CARDS{
+  width: 70%;
+  height: 100px;
+  margin:20px auto;
+}
+.FMZ .FM .CARD  p{
+  display: inline-block;
+  margin-left:70px;
+}
+.FMZ .FM .CARD .BG{
+  display: block;
+  width:80%;
+  height: 1px;
+  background: url("../img/bg.png");
+}
+.FMZ .FM .CARD .ION{
+  font-size: 15px;
+
+}
+.FMZ .FM .CARD .ION i{
+  margin-top:-35px;
+}
+
+/*刚刚合并*/
+.LIST,.has-header{
+  background-color: white;
+}
+.modal {
+  background: url("../img/body.jpg") no-repeat;
+  background-size:cover;
+}
+.JLOGO{
+  width: 100px;
+  height: 150px;
+  /*border:1px solid red;*/
+}
+.LOGO{
+  margin:0 auto;
+  width: 120px;
+  height: 120px;
+  /*border:1px solid blue;*/
+}
+.LOGO img{
+  margin-left:22px;
+}
+.LOGO p{
+  text-align: center;
+  font-size: 25px;
+  margin-top:5px;
+  color: #63d8c5;
+}
+.DAZ{
+  width: 300px;
+  height: 150px;
+  /*border:1px solid red;*/
+  margin:50px auto;
+}
+.DAZ .button-calm{
+  margin-left:20px;
+  border-radius:10px;
+  width: 250px;
+  height: 50px;
+}
+.DAZ .button-light{
+  /*background-color: #e9e1d6;*/
+  color: #63d8c5;
+  margin-left:20px;
+  border-radius:10px;
+  width: 250px;
+  height: 50px;
+  margin-top:20px;
+}
+.XKGS{
+  position: relative;
+  bottom:20px;
+  left:280px;
+  font-size: 17px;
+}
+.ion-chevron-left{
+  font-size: 20px;
+}
+.DL{
+  display: block;
+  margin-left:130px;
+  font-size: 20px;
+}
+.HEAD{
+  background-color: transparent;
+}
+.CONT{
+  background: url("../img/body.jpg") no-repeat;
+}
+.JLOGO2{
+  height: 80px;
+}
+.DELU{
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  /*border:1px solid red;*/
+}
+.DELU .item-input{
+  margin-left:30px;
+  width: 250px;
+  margin-top:30px;
+  border-radius: 20px;
+}
+.button-calm{
+  width: 250px;
+  margin-left:60px;
+  border-radius:10px;
+}
+.DSF{
+  width: 300px;
+  height: 110px;
+  /*border:1px solid red;*/
+  margin:90px auto;
+}
+.DSF p{
+  text-align: center;
+}
+.DSF .TB ul li:nth-child(1){
+  margin-left: 75px;
+}
+.DSF .TB ul li{
+  margin-top:20px;
+  float: left;
+  margin-left:30px;
+}
+.YHXY{
+  margin:-115px auto;
+  text-align: center;
+  font-size: 10px;
+}
+.YHXY a{
+  text-decoration: underline;
+  color: black;
+}
+
+.ZHUCE{
+  margin: auto;
+  width: 300px;
+  height: 250px;
+}
+.ZHUCE .item-input{
+  margin-left:30px;
+  width: 250px;
+  margin-top:20px;
+  border-radius: 20px;
+}
+.ZHE{
+  margin-top:25px;
+}
+
+.SET{
+  background-color: #fff;
+}
+.SETH{
+  width:100%;
+  height: 35px;
+  /*border:1px solid red;*/
+  background-color: #f2f2f2;
+}
+.HEAD .TJ{
+  margin-left:50px;
+  font-size: 15px;
+}
+.JLOGO3{
+  height: 30px;
+}
+.YAW{
+  width: 300px;
+  height: 50px;
+  border:1px solid red;
+  margin:0 auto;
+}
+.YAW ul li{
+  float: left;
+  margin-left:30px;
+  border-radius: 10px;
+  color: white;
+  width: 60px;
+  height: 30px;
+  border:1px solid red;
+}
+.YAW ul li:nth-child(2){
+  margin-left:110px;
+}
+.YAW ul li button{
+  border:none;
+  background-color: transparent;
+  font-size: 16px;
+  margin-left:5px;
+}
+.bottom .show{
+  display: block;
+  margin-left:125px;
+}
+
+.JQ{
+  background: url("../img/1416631200894572176l.jpg");
+  -webkit-background-size:cover;
+  background-size:cover;
+}
+
+.DLL{
+  display: inline-block;
+  margin-left:250px;
+  font-size: 18px;
+}
+
+.KEEP{
+  display: block;
+  font-size: 15px;
+  margin-left: 70px;
+  margin-top: 2px;
+}
+.TM{
+  color: #fff;
+  background: url("../img/13493251301151230327l.jpg");
+}
+.BJT{
+  margin-top: -15px;
+  width: 100%;
+  height: 250px;
+  background: url("../img/13493251301151230327l.jpg");
+}
+.WALL{
+  width: 360px;
+  height: 15px;
+  background: #f2f2f2;
+}
+.CONTENT{
+  width: 360px;
+  height: 300px;
+  border:1px solid red;
+}
+.CONTENT .item .ITEM{
+  display: inline-block;
+  float: left;
+  position: relative;
+  top: 18px;
+  color: grey;
+}
+.CONTENT .item .NIC{
+  display: inline-block;
+  float: left;
+  color: grey;
+}
+.CONTENT .item img{
+  width: 50px;
+  height: 50px;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  float: left;
+  margin-left:30px;
+}
+.CONTENT .item i.RIGHT{
+  float: right;
+  margin-top:15px;
+  color: grey;
+}
+.CONTENT .item i.RIGHTB{
+  float: right;
+  color: grey;
+}
+.CONTENT .item .ITENCON{
+  position: absolute;
+  left: 80px;
+}
+input.AREA{
+  width: 100%;
+  height: 200px;
+  background-color:aliceblue;
+  color: #000;
+}
+.TIXING{
+  font-size: 10px;
+  color: grey;
+}
+
+.box{
+  width: 100%;
+  height: 230px;
+  background-color: pink;
+
+  background-size: cover;
+}
+.Ioncontent{
+  padding-top:27px;
+}
+.Ioncontent .head{
+  margin: 0 auto;
+  width: 180px;
+  height:80px;
+  position: relative;
+}
+.Ioncontent .head span:nth-child(1){
+  display: inline-block;
+  width: 20px;
+  height:20px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  left:20px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 16px;
+}
+.Ioncontent .head span:nth-child(2){
+  display: inline-block;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top:10px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.Ioncontent .head span:nth-child(3){
+  display: inline-block;
+  width: 20px;
+  height:20px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 16px;
+}
+.Ioncontent .sect{
+  margin: 0 auto;
+  width: 250px;
+  height:120px;
+  position: relative;
+}
+.Ioncontent .sect p:nth-child(1){
+  font-size: 20px;
+  text-align: center;
+}
+.Ioncontent .sect p:nth-child(2){
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+.Ioncontent .sect p:nth-child(3){
+  width: 250px;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+}
+.Ioncontent .Nav{
+  height: 50px;
+  width: 100%;
+  background-color: white;
+}
+.Ioncontent .Nav span{
+  display: inline-block;
+  width: 80px;
+  height:30px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 28px;
+  text-align: center;
+  line-height: 30px;
+  background-color: black;
+  color: white;
+}

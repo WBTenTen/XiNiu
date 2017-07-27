@@ -1,0 +1,172 @@
+<link rel="stylesheet" href="../css/story.css">
+<link rel="stylesheet" href="../js/find.js">
+<ion-view>
+  <ion-content>
+    <div class="ZRX">
+      <div class="row">
+        <div class="col col-25" style="">
+          <ul>
+            <li><a href="">最新</a></li>
+            <li>|</li>
+            <li><a href="">最热</a></li>
+          </ul>
+        </div>
+        <div class="col col-70" style="">
+          <ul>
+            <li><input type="radio" name="type" id="qz" value="" ng-model="ty" style="display: none"><label for="qz">全站</label></li>
+            <li><input type="radio" name="type" id="zs" value="真事" ng-model="ty" style="display: none"><label
+              for="zs">真事</label></li>
+            <li><input type="radio" name="type" id="cz" value="创作" ng-model="ty" style="display: none"><label for="cz">创作</label></li>
+            <li><input type="radio" name="type" id="mm" value="秘密" ng-model="ty" style="display: none"><label for="mm">秘密</label></li>
+          </ul>
+        </div>
+      </div>
+      <div class="my">
+        <ul>
+          <li ng-repeat="article in articlese | filter:{type:ty}" >
+            <div class="card">
+              <div class="item item-text-wrap">
+                <div class="top">
+                <span>
+                  <img src="{{article.turl}}" ng-click="detail.show();$event.stopPropagation();count(article.userid)">
+                </span>
+                  <div class="laiyuan">
+                    <h2>{{article.nick}}</h2>
+                    <p>本文被阅读了{{article.readnum}}次</p>
+                  </div>
+                  <h6>{{article.type}}·{{article.state}}</h6>
+                </div>
+                <h1 style="margin-top: 10px;">{{article.title}}</h1>
+                <div class="card detail" ng-click="herdetail.show();aount(article.id)">
+                  <img src="{{article.cover}}"style="width: 328px;height:150px; ">
+                </div>
+                <div class="content" ng-click="herdetail.show();aount(article.id)">
+                  {{article.text}}
+                </div>
+                <div class="caozuo">
+                  <i>
+                    <div style="height: 16px;width: 16px;margin-top: 2px;">
+                      <img src="./img/tuij.png"style="height: 16px;width: 16px;">
+                    </div>
+                  </i>
+                  <i>{{article.tj}}</i>
+                  <i class="icon ion-android-favorite-outline"></i>
+                  <i>{{article.hot}}</i>
+                  <i class="icon ion-ios-chatbubble-outline"></i>
+                  <i>{{article.wx}}</i>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ion-content>
+
+  <script id="templates/detail.html" type="text/ng-template">
+
+    <ion-modal-view>
+      <ion-header-bar class="header">
+        <a class="buttonF" ng-click="detail.hide()"><</a>
+        <span class="person">个人主页</span>
+      </ion-header-bar>
+
+      <ion-content class="Ioncontent">
+        <div class="box" style="background: url('{{Burl}}')no-repeat;">
+          <div class="head">
+            <span class="ion-ios-email-outline"></span>
+            <span><img src="{{Turl}}" style="width: 100%;height: 100%;" alt=""></span>
+            <span class="ion-ios-personadd-outline"></span>
+          </div>
+          <div class="sect">
+            <p>{{name}}</p>
+            <p>{{Sign}}</p>
+            <p>
+              <span>关注:{{Good}}</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span>读者：{{Hot}}</span>
+            </p>
+          </div>
+        </div>
+        <div class="Nav">
+          <span>他的故事</span>
+          <span>他的收藏</span>
+          <span>他的推荐</span>
+        </div>
+        <div class="m">
+          <ul>
+            <li ng-repeat="countes in counts">
+              <div class="card">
+                <div class="item item-text-wrap">
+                  <div class="top">
+                  <span>
+                   <img src="{{countes.turl}}" ">
+                  </span>
+                    <div class="laiyuan">
+                      <h2>{{countes.nick}}</h2>
+                      <p>{{countes.putTime}}发布</p>
+                    </div>
+                    <h6>{{countes.type}}·{{countes.state}}</h6>
+                  </div>
+                  <h1 style="margin-top: 10px;">{{countes.title}}</h1>
+                  <div class="card detail" ng-click="herdetail.show();aount(countes.id)">
+                    <img src="{{countes.cover}}"style="width: 328px;height:150px; ">
+                  </div>
+                  <div class="content" ng-click="herdetail.show();aount(countes.id)">
+                    {{countes.text}}
+                  </div>
+                  <div class="caozuo">
+                    <i>
+                      <div style="height: 16px;width: 16px;margin-top: 2px;">
+                        <img src="./img/tuij.png"style="height: 16px;width: 16px;">
+                      </div>
+                    </i>
+                    <i>{{countes.tj}}</i>
+                    <i class="icon ion-android-favorite-outline"></i>
+                    <i>{{countes.hot}}</i>
+                    <i class="icon ion-ios-chatbubble-outline"></i>
+                    <i>{{countes.wx}}</i>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </ion-content>
+    </ion-modal-view>
+  </script>
+
+
+  <script id="templates/herdetail.html" type="text/ng-template">
+
+    <ion-modal-view>
+      <ion-header-bar class="header">
+        <a class="buttonF" ng-click="herdetail.hide()"><</a>
+        <span class="febmian">封面</span>
+        <span>
+          <span style="font-size: 8px;">A</span><span>A</span>
+        </span>
+      </ion-header-bar>
+
+
+      <ion-content>
+        <ul>
+          <li ng-repeat="aountes in aounts">
+            <div class="contentbox">
+              <div class="Img" style="background: url('{{aountes.cover}}');background-size: cover;"></div>
+              <p class="title">{{aountes.title}}</p>
+              <p class="state">{{aountes.type}} · {{aountes.state}}</p>
+              <p class="auther">
+                <img style="width: 20px;height: 20px;border-radius: 50%;" src="{{aountes.turl}}">
+                <span>{{aountes.nick}} · {{aountes.readnum}}次阅读</span>
+              </p>
+            </div>
+            <div>
+              <p style="text-indent: 2em">{{aountes.text}}</p>
+            </div>
+          </li>
+        </ul>
+      </ion-content>
+    </ion-modal-view>
+  </script>
+</ion-view>

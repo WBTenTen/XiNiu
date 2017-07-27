@@ -1,0 +1,541 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.log('Error', err));
+    }
+  </script>-->
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/recommend.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/jquery-1.12.3.min.js"></script>
+  <!--<script src="js/angular-route.min.js"></script>-->
+</head>
+<body ng-app="starter" ng-controller="LeftCtrl">
+
+<!--
+  The nav bar that will be updated as we navigate between views.
+-->
+<ion-side-menus>
+  <!-- Left menu -->
+  <ion-side-menu side="left" style="background-color:#123;">
+
+    <div class="LEFT row RIGHT" ng-if="!isLogin">
+      <div class="col col-10"></div>
+      <div class="col col-20">
+        <a href=""><img src="./img/logo.png" ></a>
+      </div>
+      <div class="col col-70">
+        <span class="TEN"  ng-click="Daz.show()">游客</span>
+        <span class="CKGZ">查看个人主页</span>
+      </div>
+    </div>
+
+    <div class="LEFT row RIGHTB" ng-if="isLogin">
+      <div class="col col-10"></div>
+      <div class="col col-20">
+        <a href=""><img src="./img/logo.png" ng-click="Editor.show()"></a>
+      </div>
+      <div class="col col-70">
+        <span class="TEN"  >{{Nick}}</span>
+        <span class="CKGZ">查看个人主页</span>
+      </div>
+    </div>
+
+
+    <div class="CENTER">
+      <ul>
+        <li><a ng-click="MyStory.show()"><i class="ion-ios-paper-outline"></i>我的故事</a></li>
+        <li><a ng-click="Message.show()"><i class="ion-ios-email-outline"></i>消息中心</a></li>
+        <li><a ng-click="MyRemmond.show()"><i class="ion-ios-star-outline"></i>我的收藏</a></li>
+        <li><a ng-click="Read.show()"><i class="ion-ios-clock-outline"></i>近期阅读</a></li>
+        <li><a ng-click="Off.show()"><i class="ion-ios-download-outline"></i>离线阅读</a></li>
+      </ul>
+    </div>
+
+    <div class="FOOTER">
+      <div class="FLEFT"  ng-click="Setting.show()">
+        <p class="ion-ios-gear-outline"></p>
+        <p>设置</p>
+      </div>
+      <div class="FRIGHT">
+        <p class="ion-ios-cloudy-night-outline"></p>
+        <p>夜间模式</p>
+      </div>
+    </div>
+  </ion-side-menu>
+
+  <ion-side-menu-content>
+    <!-- Main content, usually <ion-nav-view> -->
+    <ion-header-bar>
+      <div class="row">
+        <div class="col col-25">
+          <span class="ion-navicon-round" style="font-size: 30px;" ng-click="toggleLeft()"></span>
+        </div>
+        <div class="col col-50" style="font-size: 25px">犀牛故事</div>
+        <div class="col col-25">
+          <ion-model-view>
+            <span class="ion-ios-search" style="font-size: 20px;margin-left: 5px" ng-click="modal.show()"></span>
+          </ion-model-view>
+          <span class="ion-ios-compose-outline" style="font-size: 23px;margin-left: 20px;margin-top:10px;" ng-click="write.show()"></span>
+        </div>
+
+      </div>
+    </ion-header-bar>
+    <ion-content class="has-header">
+      <ion-nav-view>
+      </ion-nav-view>
+    </ion-content>
+  </ion-side-menu-content>
+
+</ion-side-menus>
+
+
+<script id="templates/search.html" type="text/ng-template">
+
+  <ion-modal-view>
+
+    <ion-header-bar class="bar bar-header bar-light">
+      <input type="text" placeholder="请输入要搜索的关键字" style="width: 80%;background-color:#ececec;border-radius: 5px;padding-left:10px;" ng-focus="Clear()" ng-blur="Appear()">
+      <button class="button button-clear button-primary" ng-click="modal.hide()">取消</button>
+    </ion-header-bar>
+
+    <ion-content class="padding">
+      <div class="LIST">
+        <h4>热门搜索</h4>
+        <div class="RMSS">
+          <ul>
+            <li>海蓝时见鲸</li>
+            <li>人性</li>
+            <li>师生恋</li>
+            <li>淤青</li>
+            <li>胡不归</li>
+            <li>同性恋</li>
+            <li>王稚生</li>
+            <li>老叔叔</li>
+            <li>未满</li>
+            <li>星座</li>
+          </ul>
+        </div>
+      </div>
+
+    </ion-content>
+
+  </ion-modal-view>
+</script>
+
+<script id="templates/write.html" type="text/ng-template">
+  <ion-modal-view>
+
+    <ion-header-bar class="bar bar-header bar-light">
+      <div class="row">
+        <div class="col col-10"><span class="ion-chevron-left" ng-click="GOI()"></span></div>
+        <div class="col col-60">
+          <span class="WRITE">写故事</span>
+        </div>
+        <div class="col col-30">
+          <span ng-click="write.hide()" class="NEXT">下一步</span>
+        </div>
+      </div>
+    </ion-header-bar>
+
+    <ion-content>
+      <div class="FMZ">
+        <span class="ion-android-radio-button-off"><i>封面</i></span>
+        <div class="FM">
+          <div class="card CARD">
+            <div class="card CARDS"></div>
+            <p>请输入标题</p>
+            <p class="BG"></p>
+            <p class="ion-android-radio-button-off ION"><i>选择分类</i></p>
+          </div>
+        </div>
+        <span class="ion-android-radio-button-off TZJ"><i>章节</i></span>
+        <div class="ZJ">
+          <div class="card CARD">
+            <div class="card CARDS"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="">
+
+      </div>
+    </ion-content>
+
+  </ion-modal-view>
+</script>
+
+
+<script id="templates/MyStory.html" type="text/ng-template">
+
+  <ion-modal-view>
+    <ion-header-bar class="HEAD">
+      <span ng-click="MyStory.hide()" class="icon ion-chevron-left"></span>
+      <p class="DL" style="margin-left: 125px;">我的故事</p>
+      <span class="TJ">推荐给编辑</span>
+    </ion-header-bar>
+
+    <ion-content>
+      <div class="JLOGO3"></div>
+      <div class="YAW">
+        <ion-tabs>
+
+          <ion-tab title="已发布">
+            你好，标签1！
+            <!--<button ng-click="selectTabWithIndex(1)">选择标签2</button>-->
+          </ion-tab>
+          <ion-tab title="我的草稿">你好标签2！</ion-tab>
+        </ion-tabs>
+      </div>
+      <div id="divs" class="bottom">
+        <div class="show">
+          <p>还没发布过故事哦！</p>
+        </div>
+        <div class="hide">
+          <p>还没有草稿哦！</p>
+        </div>
+      </div>
+    </ion-content>
+  </ion-modal-view>
+</script>
+
+
+<!--侧边栏-->
+<script id="templates/Daz.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-content>
+      <div class="JLOGO"></div>
+      <div class="LOGO">
+        <img src="./img/logo.png">
+        <p>犀牛故事</p>
+      </div>
+      <div class="DAZ">
+        <button class="button button-calm" ng-click="Login.show()">登录</button>
+        <button class="button button-light" ng-click="Register.show()">注册</button>
+      </div>
+      <p ng-click="Daz.hide()" class="XKGS">先看故事</p>
+    </ion-content>
+  </ion-modal-view>
+</script>
+
+<script id="templates/Login.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar class="HEAD">
+      <span ng-click="Login.hide()" class="icon ion-chevron-left"></span>
+      <p class="DL">登录</p>
+    </ion-header-bar>
+    <ion-content class="CONT">
+      <div class="JLOGO2"></div>
+      <form class="list DELU" name="FORM">
+        <label class="item item-input" for="temail">
+          <input type="email" name="temail" placeholder="输入邮箱" ng-model="login.email"
+                 ng-pattern="/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/"
+                 ng-required="true">
+        </label>
+        <p ng-show="FORM.temail.$invalid && FORM.temail.$dirty" style="margin-left: 15%;">请填写正确格式的邮箱</p>
+        <label class="item item-input">
+          <input type="password" placeholder="账户密码" ng-model="login.password">
+        </label>
+      </form>
+      <button class="button button-calm" ng-click="Logins()">登录</button>
+
+      <div class="DSF">
+        <p>使用第三方账号登录</p>
+        <div class="TB">
+          <ul>
+            <li><img src="./img/sinabig.png" width="32" height="32"></li>
+            <li><img src="./img/qqdl.png" alt=""></li>
+            <li><img src="./img/wxdl.png" alt=""></li>
+          </ul>
+        </div>
+      </div>
+      <p class="YHXY">注册登录即表示您同意我们的<a>用户许可协议</a></p>
+    </ion-content>
+  </ion-modal-view>
+</script>
+
+<script id="templates/Register.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar class="HEAD">
+      <span ng-click="Register.hide()" class="icon ion-chevron-left"></span>
+      <p class="DL">注册</p>
+    </ion-header-bar>
+    <ion-content class="CONT">
+      <div class="JLOGO2"></div>
+      <form class="list ZHUCE" name="myForm">
+        <label class="item item-input" for="email">
+          <input type="email" placeholder="注册邮箱" id="email" name="email"
+                 ng-pattern="/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/"
+                 ng-required="true"
+                 ng-model="user.email">
+        </label>
+        <p ng-show="myForm.email.$invalid && myForm.email.$dirty" style="margin-left: 15%;">请填写正确邮箱</p>
+        <label class="item item-input">
+          <input type="password" placeholder="账户密码" ng-model="user.password">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="请输入昵称" ng-model="user.nick">
+        </label>
+      </form>
+      <button class="button button-calm" ng-click="Resigters()"
+              ng-disabled="myForm.email.$invalid && myForm.email.$dirty"
+      >注册</button>
+      <div class="DSF ZHE">
+        <p>使用第三方账号登录</p>
+        <div class="TB">
+          <ul>
+            <li><img src="./img/sinabig.png" width="32" height="32"></li>
+            <li><img src="./img/qqdl.png" alt=""></li>
+            <li><img src="./img/wxdl.png" alt=""></li>
+          </ul>
+        </div>
+      </div>
+      <p class="YHXY">注册登录即表示您同意我们的<a>用户许可协议</a></p>
+    </ion-content>
+  </ion-modal-view>
+</script>
+
+<script id="Setting.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <span ng-click="Setting.hide()" class="icon ion-chevron-left"></span>
+      <p class="DL">设置</p>
+    </ion-header-bar>
+    <ion-content class="SET">
+      <div class="SETH"></div>
+      <div class="list">
+
+        <a class="item" href="#"> 我的兴趣</a>
+
+        <ul>
+          <li class="item item-toggle">
+            省流量模式
+            <label class="toggle toggle-positive">
+              <input type="checkbox" checked="">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+        </ul>
+
+        <a class="item" href="#">
+          意见反馈
+        </a>
+
+        <a class="item" href="#">
+          清除缓存
+        </a>
+        <a class="item" href=""> 检查更新</a>
+        <a class="item" href=""> 关于我们</a>
+      </div>
+    </ion-content>
+  </ion-modal-view>
+</script>
+
+<script id="Message.html" type="text/ng-template">
+  <ion-header-bar>
+    <span ng-click="Message.hide()" class="icon ion-chevron-left"></span>
+    <p class="DL">消息中心</p>
+  </ion-header-bar>
+  <ion-content>
+
+  </ion-content>
+</script>
+
+<script id="MyRemmond.html" type="text/ng-template">
+  <ion-header-bar>
+    <span ng-click="MyRemmond.hide()" class="icon ion-chevron-left"></span>
+    <p class="DL">我的收藏</p>
+  </ion-header-bar>
+  <ion-content>
+
+  </ion-content>
+</script>
+
+<script id="Read.html" type="text/ng-template">
+  <ion-header-bar>
+    <span ng-click="Read.hide()" class="icon ion-chevron-left"></span>
+    <p class="DL">近期阅读</p>
+  </ion-header-bar>
+  <ion-content>
+    <div class="JQ">
+
+    </div>
+  </ion-content>
+</script>
+
+<script id="Off.html" type="text/ng-template">
+  <ion-header-bar>
+    <span ng-click="Off.hide()" class="icon ion-chevron-left"></span>
+    <p class="DL">离线阅读</p>
+  </ion-header-bar>
+  <ion-content>
+
+  </ion-content>
+</script>
+
+<!--编辑资料-->
+<script id="Editor.html" type="text/ng-template">
+  <ion-header-bar>
+    <span ng-click="Editor.hide()" class="icon ion-chevron-left"></span>
+    <p class="DLL" ng-click="Material.show()">编辑资料</p>
+  </ion-header-bar>
+  <ion-content class="Ioncontent">
+    <div class="box" style="background: url('{{Burl}}')no-repeat;background-size: cover;">
+      <div class="head">
+        <span class="ion-ios-email-outline"></span>
+        <span><img src="{{Turl}}" style="width: 100%;height: 100%;" alt=""></span>
+        <span class="ion-ios-personadd-outline"></span>
+      </div>
+      <div class="sect">
+        <p>{{name}}</p>
+        <p>{{Sign}}</p>
+        <p>
+          <span>关注:{{Good}}</span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span>读者：{{Hot}}</span>
+        </p>
+      </div>
+    </div>
+  </ion-content>
+</script>
+
+<!--修改资料-->
+<script id="Material.html" type="text/ng-template">
+  <ion-header-bar class="TM">
+    <span ng-click="Material.hide()" class="icon ion-chevron-left"></span>
+    <p class="DL">修改资料</p>
+    <span class="KEEP">保存</span>
+  </ion-header-bar>
+  <ion-content>
+    <div class="BJT"></div>
+    <div class="WALL"></div>
+    <div class="CONTENT list">
+
+      <a class="item">
+        <span class="ITEM">头像</span>
+        <div><img src="./img/257728317935104498l.jpg"></div>
+        <i class="icon ion-chevron-right RIGHT"></i>
+      </a>
+
+      <a class="item" ng-click="NIC.show()">
+        <span class="NIC">昵称</span>
+        <div class="ITENCON">TenTen</div>
+        <i class="icon ion-chevron-right RIGHTB"></i>
+      </a>
+
+     <a class="item" ng-click="MAN()">
+        <span class="NIC">性别</span>
+        <div class="ITENCON">
+          <select style="border:none;width: 50px;text-align: center">
+            <option>女</option>
+            <option selected="">男</option>
+          </select>
+        </div>
+        <i class="icon ion-chevron-right RIGHTB"></i>
+      </a>
+
+      <a class="item">
+        <span class="NIC">生日</span>
+        <div class="ITENCON">
+          <select style="border:none;width: 100px;text-align: center">
+            <option>2017-06-12</option>
+            <option selected="">2017-05-12</option>
+            <option selected="">2017-02-22</option>
+            <option selected="">2017-08-02</option>
+            <option selected="">2017-09-12</option>
+            <option selected="">2017-09-07</option>
+            <option selected="">2017-07-15</option>
+            <option selected="">2017-07-13</option>
+            <option selected="">2017-07-20</option>
+          </select>
+        </div>
+        <i class="icon ion-chevron-right RIGHTB"></i>
+      </a>
+
+      <a class="item" ng-click="City.show()">
+        <span class="NIC">城市</span>
+        <div class="ITENCON">水星</div>
+        <i class="icon ion-chevron-right RIGHTB"></i>
+      </a>
+      
+      <a class="item" ng-click="QianMing.show()">
+        <span class="NIC">签名</span>
+        <div class="ITENCON">在故事里相遇</div>
+        <i class="icon ion-chevron-right RIGHTB"></i>
+      </a>
+    </div>
+  </ion-content>
+</script>
+
+<!--修改昵称-->
+<script id="NIC.html" type="text/ng-template">
+  <ion-header-bar>
+    <span ng-click="NIC.hide()" class="icon ion-chevron-left"></span>
+    <p class="DL">修改昵称</p>
+    <span class="KEEP">保存</span>
+  </ion-header-bar>
+  <ion-content>
+    <div class="JLOGO2"></div>
+    <input type="text" class="AREA" placeholder="TenTen">
+  </ion-content>
+</script>
+
+<!--修改城市-->
+<script id="City.html" type="text/ng-template"
+>
+  <ion-header-bar>
+    <span ng-click="City.hide()" class="icon ion-chevron-left"></span>
+    <p class="DL">修改城市</p>
+    <span class="KEEP">保存</span>
+  </ion-header-bar>
+  <ion-content>
+    <div class="JLOGO2"></div>
+    <input type="text" class="AREA" placeholder="水星" maxlength="10">
+    <p class="TIXING">快！趁我还没做好这个页面，输入一个酷炫一点的地名，等做好了就得选真是的地名了！记住不能超过10个字哈！</p>
+  </ion-content>
+</script>
+
+<!--签名-->
+<script id="QianMing.html" type="text/ng-template">
+  <ion-header-bar>
+    <span ng-click="QianMing.hide()" class="icon ion-chevron-left"></span>
+    <p class="DL">修改签名</p>
+    <span class="KEEP">保存</span>
+  </ion-header-bar>
+  <ion-content>
+    <div class="JLOGO2"></div>
+    <input type="text" class="AREA">
+  </ion-content>
+</script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<ion-view>
+  <ion-content class="padding tuijian">
+    <!--轮播图-->
+    <ion-slide-box active-slide="myActiveSlide" auto-play="true" slide-interval="2000" does-continue="true">
+      <ion-slide>
+        <div class="box banner">
+          <img src="./img/xiniu1.jpg" style="height: 170px;width: 360px;">
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box banner">
+          <img src="./img/xiniu2.jpg" style="height: 170px;width: 360px;">
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box banner">
+          <img src="./img/xiniu3.jpg" style="height: 170px;width: 360px;">
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box banner">
+          <img src="./img/xiniu4.jpg" style="height: 170px;width: 360px;">
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+    <!--全站最热榜-->
+    <div class="hot publics">
+      <p>
+        全站最热榜
+        <span>更多</span>
+      </p>
+      <div class="left">
+        <span>Top1</span>
+        <span>Top2</span>
+        <span>Top3</span>
+        <span class="last">004</span>
+      </div>
+        <ul>
+          <li ng-repeat="article in articles|orderBy:'hot':true|limitTo:4";>
+            <div class="right" ng-click="herdetail.show();aount(article.id)">
+            <div class="info">
+              <h4>{{article.title}}</h4>
+              <h5>By{{article.nick}}</h5>
+              <h6>{{article.type}}.{{article.state}}.{{article.words}}</h6>
+            </div>
+            <div class="card">
+              <img ng-src="{{article.cover}}" style="width: 100px;height:80px">
+            </div>
+            </div>
+          </li>
+        </ul>
+    </div>
+    <div class="line">
+
+    </div>
+    <!--编辑优选榜-->
+    <div class="good publics">
+      <p>
+        编辑优选榜
+        <span>更多</span>
+      </p>
+      <div class="left">
+        <span>Top1</span>
+        <span>Top2</span>
+        <span>Top3</span>
+        <span class="last">004</span>
+      </div>
+      <ul>
+
+        <li ng-repeat="article in articles|orderBy:'good':true|limitTo:4">
+          <div class="right" ng-click="herdetail.show();aount(article.id)">
+          <div class="info">
+            <h4>{{article.title}}</h4>
+            <h5>By{{article.nick}}</h5>
+            <h6>{{article.type}}.{{article.state}}.{{article.words}}</h6>
+          </div>
+          <div class="card">
+            <img ng-src="{{article.cover}}" style="width: 100px;height:80px">
+
+          </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+    <div class="line">
+
+    </div>
+    <!--新作热榜-->
+    <div class="new publics">
+      <p>
+        新作最热榜
+        <span>更多</span>
+      </p>
+      <div class="left">
+        <span>Top1</span>
+        <span>Top2</span>
+        <span>Top3</span>
+        <span class="last">004</span>
+      </div>
+      <ul>
+        <li ng-repeat="article in articles|orderBy:'newhot':true|limitTo:4">
+          <div class="right" ng-click="herdetail.show();aount(article.id)">
+          <div class="info">
+            <h4>{{article.title}}</h4>
+            <h5>By{{article.nick}}</h5>
+            <h6>{{article.type}}.{{article.state}}.{{article.words}}</h6>
+          </div>
+          <div class="card">
+            <img ng-src="{{article.cover}}" style="width: 100px;height:80px">
+
+          </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="line">
+
+    </div>
+    <!--最受期待的作品-->
+    <div class="admire publics">
+      <p>
+        最受期待作品榜
+        <span>更多</span>
+      </p>
+      <div class="left">
+        <span>Top1</span>
+        <span>Top2</span>
+        <span>Top3</span>
+        <span class="last">004</span>
+      </div>
+      <ul>
+        <li ng-repeat="article in articles|orderBy:'cg':true|limitTo:4">
+          <div class="right" ng-click="herdetail.show();aount(article.id)">
+
+
+          <div class="info">
+            <h4>{{article.title}}</h4>
+            <h5>By{{article.nick}}</h5>
+            <h6>{{article.type}}.{{article.state}}.{{article.words}}</h6>
+          </div>
+          <div class="card">
+            <img ng-src="{{article.cover}}" style="width: 100px;height:80px">
+
+          </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="line">
+    </div>
+    <!--全站五星榜-->
+    <div class="wx publics">
+      <p>
+        全站五星榜
+        <span>更多</span>
+      </p>
+      <div class="left">
+        <span>Top1</span>
+        <span>Top2</span>
+        <span>Top3</span>
+        <span class="last">004</span>
+      </div>
+      <ul>
+        <li ng-repeat="article in articles|orderBy:'wx':true|limitTo:4">
+          <div class="right" ng-click="herdetail.show();aount(article.id)">
+
+
+          <div class="info">
+            <h4>{{article.title}}</h4>
+            <h5>By{{article.nick}}</h5>
+            <h6>{{article.type}}.{{article.state}}.{{article.words}}</h6>
+          </div>
+          <div class="card">
+            <img ng-src="{{article.cover}}" style="width: 100px;height:80px">
+
+          </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="line">
+
+    </div>
+    <!--推荐榜-->
+    <div class="tj publics">
+      <p>
+        推荐榜
+        <span>更多</span>
+      </p>
+      <div class="left">
+        <span>Top1</span>
+        <span>Top2</span>
+        <span>Top3</span>
+        <span class="last">004</span>
+      </div>
+      <ul>
+        <li ng-repeat="article in articles|orderBy:'tj':true|limitTo:4">
+          <div class="right" ng-click="herdetail.show();aount(article.id)">
+          <div class="info">
+            <h4>{{article.title}}</h4>
+            <h5>By{{article.nick}}</h5>
+            <h6>{{article.type}}.{{article.state}}.{{article.words}}</h6>
+          </div>
+          <div class="card">
+            <img ng-src="{{article.cover}}" style="width: 100px;height:80px">
+          </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--{{articles|json}}-->
+    <!--{{articles|orderBy:newhot:true|limitTo:4}}-->
+  </ion-content>
+
+  <script id="templates/herdetail.html" type="text/ng-template">
+
+    <ion-modal-view>
+      <ion-header-bar class="header">
+        <a class="buttonF" ng-click="herdetail.hide()"><</a>
+        <span class="febmian">封面</span>
+        <span>
+          <span style="font-size: 8px;">A</span><span>A</span>
+        </span>
+      </ion-header-bar>
+
+
+      <ion-content>
+        <ul>
+          <li ng-repeat="aountes in aounts">
+            <div class="contentbox">
+              <div class="Img" style="background: url('{{aountes.cover}}');background-size: cover;"></div>
+              <p class="title">{{aountes.title}}</p>
+              <p class="state">{{aountes.type}} · {{aountes.state}}</p>
+              <p class="auther">
+                <img style="width: 20px;height: 20px;border-radius: 50%;" src="{{aountes.turl}}">
+                <span>{{aountes.nick}} · {{aountes.readnum}}次阅读</span>
+              </p>
+            </div>
+            <div>
+              <p style="text-indent: 2em">{{aountes.text}}</p>
+            </div>
+          </li>
+        </ul>
+      </ion-content>
+    </ion-modal-view>
+  </script>
+</ion-view>

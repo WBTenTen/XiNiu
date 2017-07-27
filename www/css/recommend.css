@@ -1,0 +1,655 @@
+.tuijian .publics{
+  width: 100%;
+  height: 440px;
+  padding-left: 10px;
+}
+.tuijian .publics p{
+  border-bottom:1px solid #c0c0c0;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  color: #000000;
+}
+.tuijian .publics span{
+  float: right;
+  display: block;
+  height: 30px;
+  width: 30px;
+  font-size: 10px;
+  color:#999999;
+}
+.tuijian .line{
+  width: 100%;
+  height: 5px;
+  background-color:#f8f8ff;
+}
+.tuijian .left{
+  height: 410px;
+  width: 50px;
+  float: left;
+  line-height: 100px;
+  text-align: left;
+  color: gold;
+  font-size: 15px;
+}
+.tuijian .right{
+  height: 100px;
+  float: left;
+  width: 300px;
+  border-bottom:1px solid #eeeeee;
+}
+.tuijian .left span{
+  width: 50px;
+  height: 100px;
+  display: block;
+  float: left;
+  line-height: 80px;
+  color: goldenrod;
+  font-size: 16px;
+  font-weight: bold;
+}
+.tuijian.left span.last{
+  color: #888888;
+}
+.tuijian ul{
+  float: left;
+  margin-top: 0;
+}
+.tuijian li{
+  height: 100px;
+}
+.tuijian h4{
+  font-size: 15px;
+  font-weight:bold;
+  color: black;
+}
+.tuijian h5{
+  font-size: 14px;
+  color: #888888;
+}
+.tuijian h6{
+  color:#999999;
+  font-size: 13px;
+}
+.tuijian .info{
+  float: left;
+}
+.tuijian .card{
+  position: absolute;
+  right: 10px;
+  float: right;
+  height: 80px;
+  margin-top: 10px;
+  width: 100px;
+}
+
+.my li{
+  margin-top: -13px;
+  height: 370px;
+  width: 100%;
+  position: relative;
+}
+.my li .card{
+  margin-left: 1px;
+  width: 360px;
+  height: 370px;
+}
+.my li .top{
+  width: 100%;
+  height: 45px;
+  /*border:1px solid blue;*/
+}
+.my li span{
+  float: left;
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.my li span img{
+  width: 45px;
+  height:45px;
+  background-size: cover;
+}
+.my li .laiyuan{
+  float: left;
+  height: 45px;
+  width: 200px;
+  margin-left: 10px;
+  /*border:1px solid red;*/
+}
+.my li .laiyuan h2{
+  font-size: 15px;
+  color: black;
+}
+.my li .laiyuan p{
+  font-size: 12px;
+}
+.my li h6{
+  height: 45px;
+  width: 70px;
+  float: right;
+  font-size: 12px;
+  text-align: right;
+  line-height: 45px;
+  /*border:1px solid red;*/
+}
+.my li h1{
+  margin-top: 1px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.my li .detail{
+  margin-top: -3px;
+  width: 328px;
+  height: 150px;
+}
+.my li .content{
+  margin-top: -10px;
+  float: left;
+  width: 100%;
+  height: 90px;
+  font-size: 14px;
+}
+.my li .caozuo{
+  float: right;
+  width: 40%;
+  height: 20px;
+  /*border:1px solid blue;*/
+  margin-left: 60%;
+}
+.my li .caozuo i{
+  /*border:1px solid red;*/
+  float: left;
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  color: black;
+  margin-left: 1px;
+}
+
+.find .img{
+  margin-top: 14px;
+  width: 100%;
+  height: 140px;
+}
+.find .line{
+  width: 100%;
+  height: 5px;
+  background-color:#f8f8ff;
+}
+.find .like{
+  padding-left: 10px;
+  width: 100%;
+  height: 435px;
+}
+.find .like p{
+  border-bottom:1px solid #c0c0c0;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  color: #000000;
+}
+.find .like span{
+  float: right;
+  display: block;
+  height: 30px;
+  width: 50px;
+  font-size: 10px;
+  color:#999999;
+}
+.find .right{
+  height: 100px;
+  float: left;
+  width: 338px;
+  border-bottom:1px solid #eeeeee;
+}
+.find .left span{
+  width: 50px;
+  height: 100px;
+  display: block;
+  float: left;
+  line-height: 80px;
+  color: goldenrod;
+  font-size: 16px;
+  font-weight: bold;
+}
+.find.left span.last{
+  color: #888888;
+}
+.find ul{
+  float: left;
+  margin-top: 0;
+}
+.find li{
+  height: 100px;
+}
+.find h4{
+  font-size: 15px;
+  font-weight:bold;
+  color: black;
+}
+.find h5{
+  font-size: 14px;
+  color: #888888;
+}
+.find h6{
+  color:#999999;
+  font-size: 13px;
+}
+.find .info{
+  float: left;
+}
+.find .card{
+  position: absolute;
+  right: 2px;
+  float: right;
+  height: 80px;
+  margin-top: 10px;
+  width: 100px;
+}
+.find .img1{
+  width: 100%;
+  height: 150px;
+}
+.find .type{
+  width: 100%;
+  height: 200px;
+  padding-left: 10px;
+}
+.find .type p{
+  font-size: 16px;
+  color: #888888;
+}
+.find .type .banner{
+  /*border:1px solid red;*/
+  width: 340px;
+  height: 150px;
+}
+.find .type .banner ul{
+  list-style-type:none;
+}
+.find .type .banner ul li{
+  width:66px;
+  height: 70px;
+  margin-left: 2px;
+  /*border:1px solid red;*/
+  float: left;
+}
+.find .type .banner ul li span{
+  display: block;
+  width: 50px;
+  height: 50px;
+  /*border:1px solid pink;*/
+  margin-left: 8px;
+}
+.find .type .banner ul li p{
+  height: 20px;
+  width: 66px;
+  color: #333333;
+  font-size: 13px;
+  /*border:1px solid blue;*/
+  text-align: center;
+}
+
+.find .read{
+  width: 100%;
+  height: 200px;
+  padding-left: 10px;
+}
+.find .read .card{
+  margin-top: -1px;
+  height: 180px;
+  width: 340px;
+}
+.find .like1{
+  width: 100%;
+  height: 250px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+.find .like1 p{
+  color:#000000;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.find .like1 ul{
+  list-style: none;
+  overflow: hidden;
+  width:970px;
+  margin-top: 20px;
+}
+.find .like1 ul li{
+  float: left;
+  border: 1px solid #ccc;
+  width: 110px;
+  height:170px;
+  margin-left: 10px;
+}
+.find .like1 ul li img{
+  display: block;
+  width: 40px;
+  height:40px;
+  border: 1px solid red;
+  border-radius: 50%;
+  margin: 10px auto 0;
+}
+.find .like1 ul li input{
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-top: 10px;
+  width: 50px;
+  border: none;
+  height: 25px;
+  background-color:white;
+  border-radius: 10px;
+  line-height: 24px;
+  text-align: center;
+  border:1px solid forestgreen;
+}
+
+.find .like1 ul li p:nth-child(2){
+  text-align: center;
+  margin: 5px auto 0;
+  font-weight: bold;
+}
+.find .like1 ul li p:nth-child(3){
+  text-align: center;
+  margin: 5px auto 0;
+  font-size: 12px;
+}
+.find .like1 ul li p:nth-child(4){
+  text-align: center;
+  margin: 5px auto 0;
+  color: #cccccc;
+  font-size: 12px;
+}
+.find .like1 ul li p:nth-child(5){
+  width: 50px;
+  height:25px;
+  border: 1px solid red;
+  text-align: center;
+  margin: 5px auto 0;
+  line-height: 24px;
+  font-size: 12px;
+
+}
+.find .like1 ul li:nth-child(1){
+  margin-left: 5px;
+}
+
+.find .book{
+  padding-left: 10px;
+  width: 100%;
+  height: 200px;
+  /*border:1px solid red;*/
+}
+.find .book .banner{
+  width: 340px;
+  height: 170px;
+  /*border:1px solid blue;*/
+}
+.find .book .banner li{
+  float: left;
+  width: 100px;
+  height: 160px;
+  /*border:1px solid red;*/
+  margin-left: 10px;
+}
+.find .book .banner li span{
+  display: block;
+  width: 100px;
+  height: 120px;
+  /*border:1px solid black;*/
+}
+.find .book .banner li h6{
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+.find .book .banner li span{
+  color:#666666;
+}
+/*模态框样式*/
+.contentbox{
+  padding-top: 27px;
+
+}
+.contentbox .Img{
+  width: 250px;
+  height:200px;
+
+  margin: 10px auto 0;
+}
+.contentbox .title{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.contentbox .state{
+  text-align: center;
+  margin-top: 10px;
+}
+.contentbox .auther{
+  text-align: center;
+  height: 50px;
+  width: 300px;
+  margin: 10px auto;
+  position: relative;
+
+}
+.contentbox .auther span{
+  font-size: 12px;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  left: 45%;
+  transform: translateX(-20%);
+}
+.contentbox .auther img{
+  position: absolute;
+  top: 0;
+  left: 28%;
+}
+
+.header{
+  position: fixed;
+  top:0px;
+  left:0px;
+}
+.header .febmian  {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0 auto;
+}
+.header .person {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0 auto;
+}
+/*头像模态框样式*/
+.Ioncontent{
+  padding-top:27px;
+}
+.Ioncontent .head{
+  margin: 0 auto;
+  width: 180px;
+  height:80px;
+  position: relative;
+}
+.Ioncontent .head span:nth-child(1){
+  display: inline-block;
+  width: 20px;
+  height:20px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  left:20px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 16px;
+}
+.Ioncontent .head span:nth-child(2){
+  display: inline-block;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top:10px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.Ioncontent .head span:nth-child(3){
+  display: inline-block;
+  width: 20px;
+  height:20px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 16px;
+}
+.Ioncontent .sect{
+  margin: 0 auto;
+  width: 250px;
+  height:120px;
+  position: relative;
+}
+.Ioncontent .sect p:nth-child(1){
+  font-size: 20px;
+  text-align: center;
+}
+.Ioncontent .sect p:nth-child(2){
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+.Ioncontent .sect p:nth-child(3){
+  width: 250px;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+}
+.Ioncontent .Nav{
+  height: 50px;
+  width: 100%;
+  background-color: white;
+}
+.Ioncontent .Nav span{
+  display: inline-block;
+  width: 80px;
+  height:30px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 28px;
+  text-align: center;
+  line-height: 30px;
+  background-color: black;
+  color: white;
+}
+.m li{
+  margin-top: -13px;
+  height: 370px;
+  width: 100%;
+  position: relative;
+}
+.m li .card{
+  margin-left: 1px;
+  width: 360px;
+  height: 370px;
+}
+.m li .top{
+  width: 100%;
+  height: 45px;
+  /*border:1px solid blue;*/
+}
+.m li span{
+  float: left;
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.m li span img{
+  width: 45px;
+  height:45px;
+  background-size: cover;
+}
+.m li .laiyuan{
+  float: left;
+  height: 45px;
+  width: 200px;
+  margin-left: 10px;
+  /*border:1px solid red;*/
+}
+.m li .laiyuan h2{
+  font-size: 15px;
+  color: black;
+}
+.m li .laiyuan p{
+  font-size: 12px;
+}
+.m li h6{
+  height: 45px;
+  width: 70px;
+  float: right;
+  font-size: 12px;
+  text-align: right;
+  line-height: 45px;
+  /*border:1px solid red;*/
+}
+.m li h1{
+  margin-top: 1px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.m li .detail{
+  margin-top: -3px;
+  width: 328px;
+  height: 150px;
+}
+.m li .content{
+  margin-top: -10px;
+  float: left;
+  width: 100%;
+  height: 90px;
+  font-size: 14px;
+}
+.m li .caozuo{
+  float: right;
+  width: 40%;
+  height: 20px;
+  /*border:1px solid blue;*/
+  margin-left: 60%;
+}
+.m li .caozuo i{
+  /*border:1px solid red;*/
+  float: left;
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  color: black;
+  margin-left: 2px;
+}
+
+.selected{
+  font-size: 12px;
+}
+
+
+
+

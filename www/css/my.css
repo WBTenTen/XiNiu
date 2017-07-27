@@ -1,0 +1,253 @@
+.header{
+  position: fixed;
+  top:0px;
+  left:0px;
+}
+.header .person {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0 auto;
+}
+.header .febmian  {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0 auto;
+}
+
+
+.header .buttonF{
+  font-size: 30px;
+  font-weight: bold;
+}
+.box{
+  width: 100%;
+  height: 230px;
+  background-color: pink;
+
+  background-size: cover;
+}
+.Ioncontent{
+  padding-top:27px;
+}
+.Ioncontent .head{
+  margin: 0 auto;
+  width: 180px;
+  height:80px;
+  position: relative;
+}
+.Ioncontent .head span:nth-child(1){
+  display: inline-block;
+  width: 20px;
+  height:20px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  left:20px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 16px;
+}
+.Ioncontent .head span:nth-child(2){
+  display: inline-block;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top:10px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.Ioncontent .head span:nth-child(3){
+  display: inline-block;
+  width: 20px;
+  height:20px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 16px;
+}
+.Ioncontent .sect{
+  margin: 0 auto;
+  width: 250px;
+  height:120px;
+  position: relative;
+}
+.Ioncontent .sect p:nth-child(1){
+  font-size: 20px;
+  text-align: center;
+}
+.Ioncontent .sect p:nth-child(2){
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+.Ioncontent .sect p:nth-child(3){
+  width: 250px;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+}
+.Ioncontent .Nav{
+  height: 50px;
+  width: 100%;
+  background-color: white;
+}
+.Ioncontent .Nav span{
+  display: inline-block;
+  width: 80px;
+  height:30px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 28px;
+  text-align: center;
+  line-height: 30px;
+  background-color: black;
+  color: white;
+}
+
+
+.m li{
+  margin-top: -13px;
+  height: 370px;
+  width: 100%;
+  position: relative;
+}
+.m li .card{
+  margin-left: 1px;
+  width: 360px;
+  height: 370px;
+}
+.m li .top{
+  width: 100%;
+  height: 45px;
+  /*border:1px solid blue;*/
+}
+.m li span{
+  float: left;
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.m li span img{
+  width: 45px;
+  height:45px;
+  background-size: cover;
+}
+.m li .laiyuan{
+  float: left;
+  height: 45px;
+  width: 200px;
+  margin-left: 10px;
+  /*border:1px solid red;*/
+}
+.m li .laiyuan h2{
+  font-size: 15px;
+  color: black;
+}
+.m li .laiyuan p{
+  font-size: 12px;
+}
+.m li h6{
+  height: 45px;
+  width: 70px;
+  float: right;
+  font-size: 12px;
+  text-align: right;
+  line-height: 45px;
+  /*border:1px solid red;*/
+}
+.m li h1{
+  margin-top: 1px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.m li .detail{
+  margin-top: -3px;
+  width: 328px;
+  height: 150px;
+}
+.m li .content{
+  margin-top: -10px;
+  float: left;
+  width: 100%;
+  height: 90px;
+  font-size: 14px;
+}
+.m li .caozuo{
+  float: right;
+  width: 40%;
+  height: 20px;
+  /*border:1px solid blue;*/
+  margin-left: 60%;
+}
+.m li .caozuo i{
+  /*border:1px solid red;*/
+  float: left;
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  color: black;
+  margin-left: 1px;
+}
+
+
+.contentbox{
+  padding-top: 27px;
+
+}
+.contentbox .Img{
+  width: 250px;
+  height:200px;
+
+  margin: 10px auto 0;
+}
+.contentbox .title{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.contentbox .state{
+  text-align: center;
+  margin-top: 10px;
+}
+.contentbox .auther{
+  text-align: center;
+  height: 50px;
+  width: 300px;
+  margin: 10px auto;
+  position: relative;
+
+}
+.contentbox .auther span{
+  font-size: 12px;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  left: 45%;
+  transform: translateX(-20%);
+}
+.contentbox .auther img{
+  position: absolute;
+  top: 0;
+  left: 28%;
+}
+
+
+
+
+
+
